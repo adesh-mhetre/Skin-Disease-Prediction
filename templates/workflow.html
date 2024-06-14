@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+{% load static %}
+<html class="no-js" lang="en">
+
+
+<head>
+
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, user-scalable=1">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/zub3tbp.css">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Skin Disease Predictor</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+
+    <!-- script
+    ================================================== -->
+    <script src="{% static 'js/modernizr.js' %}"></script>
+    <script src="{% static 'js/pace.min.js' %}"></script>
+
+
+
+    <script type="text/javascript">
+        var svg = document.getElementsByTagName("svg");
+
+        var rect = document.getElementsByTagName("rect");
+
+        var text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        text.setAttribute('x', '10');
+        text.setAttribute('y', '20');
+        text.setAttribute('fill', '#000');
+        text.textContent = 'Hello, I am a blah blah blah blah blah';
+    </script>
+
+
+
+</head>
+
+<body id="top">
+
+
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <nav class="header-nav">
+
+            <a href="" class="header-nav__close" title="close"><span>Close</span></a>
+
+            <div class="header-nav__content">
+                <h3>Navigation</h3>
+
+                <ul class="header-nav__list">
+                    {% if user.is_authenticated %}
+                    <li class="current">
+                        <p>Hey, {{ user.first_name }}</p>
+                    </li>
+                    {% endif %}
+                    <li><a href="/" title="home">Home</a></li>
+                    <li><a href="/about" title="about">About</a></li>
+                    <li><a href="" title="workflow">Workflow</a></li>
+                    <li><a href="/skindisorders" title="Skin Disorders">Skin Disorders</a></li>
+                    <li><a href="/diagnosis" title="diagnosis">Diagnosis</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="/logout" title="contact">Logout</a></li>
+                    {% else %}
+                    <li><a href="/login" title="contact">Login</a></li>
+                    <li><a href="/signup" title="contact">Sign up</a></li>
+                    {% endif %}
+
+                </ul>
+
+                <p>Skin Disease Predictor<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-
+                    ASVA</p>
+
+
+
+            </div> <!-- end header-nav__content -->
+
+        </nav>
+
+        <a class="header-menu-toggle" href="">
+            <span class="header-menu-text">Menu</span>
+            <span class="header-menu-icon"></span>
+        </a>
+
+    </header> <!-- end s-header -->
+
+
+   
+
+     <!-- Workflow title
+    ================================================== -->
+    <section id='workflow' class="s-services" style="height: 1100px">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h1 class="display-2">Workflow</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <br>
+
+        <!--  Worflow start -->
+
+        <div class="wrapper ">
+            <div class="svg-container block-tab-full" data-aos="fade-up">
+                <svg version="1.1" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet" class="svg-content">
+
+                    <defs>
+                        <marker markerWidth="4" markerHeight="10" viewBox="-2 -4 4 4" refX="0" refY="0"
+                            markerUnits="strokeWidth" orient="auto">
+                            <polyline points="2,-2 0,0 2,2" stroke="#443c3d" stroke-width="0.75px" fill="none" />
+                        </marker>
+                    </defs>
+
+
+                    <g class="box-group">
+                        <g transform="translate(-5)">
+                            <circle fill="#000" cx="55" cy="50" r="45" opacity="1" />
+                            <text x="28" y="58" font-family="Open Sans Condensed" font-size="12" stroke="none"
+                                fill="#f5f3e7" font-weight="100"
+                                style="text-transform:uppercase; letter-spacing: 1px">Dataset</text>
+                            <line x1="102" x2="135" y1="50" y2="50" stroke-width="2" stroke="#443c3d"
+                                stroke-dasharray="2,1">
+                        </g>
+
+
+                        <line x1="100" x2="136" y1="50" y2="50" stroke-width="2" stroke="#443c3d"
+                            stroke-dasharray="2,1" />
+
+
+                        <g transform="translate(136)">
+                            <rect fill="#39b54a" x="2" y="25" rx="3" ry="3" width="100" height="50" />
+                            <text x="30" y="47" font-family="Open Sans Condensed" font-size="10" stroke="none"
+                                fill="#f5f3e7" font-weight="900"
+                                style="text-transform:uppercase; letter-spacing: 1px">Data
+                                <tspan x="5" dy="17">Preprocessing</tspan>
+                            </text>
+                        </g>
+
+                        <line x1="240" x2="268" y1="50" y2="50" stroke-width="2" stroke="#443c3d"
+                            stroke-dasharray="2,1" />
+
+                        <g transform="translate(268)">
+                            <rect fill="#39b54a" x="2" y="25" rx="3" ry="3" width="100" height="50" />
+                            <text x="30" y="47" font-family="Open Sans Condensed" font-size="10" stroke="none"
+                                fill="#f5f3e7" font-weight="900"
+                                style="text-transform:uppercase; letter-spacing: 1px">Data
+                                <tspan x="5" dy="17">Augmentation</tspan>
+                            </text>
+                        </g>
+
+                        <line x1="370" x2="400" y1="50" y2="50" stroke-width="2" stroke="#443c3d"
+                            stroke-dasharray="2,1" />
+
+                        <g transform="translate(400)">
+                            <rect fill="#39b54a" x="2" y="25" rx="3" ry="3" width="100" height="50" />
+                            <text x="13" y="47" font-family="Open Sans Condensed" font-size="10" stroke="none"
+                                fill="#f5f3e7" font-weight="900"
+                                style="text-transform:uppercase; letter-spacing: 1px">Developing
+                                <tspan x="13" dy="17">CNN model</tspan>
+                            </text>
+                        </g>
+                    </g>
+
+                    <line x1="450" x2="450" y1="77" y2="124" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+
+                    <g transform="translate(0,100)">
+                        <g transform="translate(5)">
+                            <rect fill="#39b54a" x="2" y="25" rx="3" ry="3" width="100" height="50" />
+                            <text x="30" y="47" font-family="Open Sans Condensed" font-size="10" stroke="none"
+                                fill="#f5f3e7" font-weight="900"
+                                style="text-transform:uppercase; letter-spacing: 1px">Web
+                                <tspan x="14" dy="17">Application</tspan>
+                            </text>
+                        </g>
+
+                        <line x1="109" x2="136" y1="50" y2="50" stroke-width="2" stroke="#443c3d"
+                            stroke-dasharray="2,1" />
+
+                        <g transform="translate(136)">
+                            <rect fill="#39b54a" x="2" y="25" rx="3" ry="3" width="100" height="50" />
+                            <text x="23" y="47" font-family="Open Sans Condensed" font-size="10" stroke="none"
+                                fill="#f5f3e7" font-weight="900"
+                                style="text-transform:uppercase; letter-spacing: 1px">Final
+                                <tspan x="23" dy="17">Model</tspan>
+                            </text>
+                        </g>
+
+                        <line x1="240" x2="268" y1="50" y2="50" stroke-width="2" stroke="#443c3d"
+                            stroke-dasharray="2,1" />
+
+                        <g transform="translate(268)">
+                            <rect fill="#39b54a" x="2" y="25" rx="3" ry="3" width="100" height="50" />
+                            <text x="8" y="47" font-family="Open Sans Condensed" font-size="8" stroke="none" fill="#fff"
+                                font-weight="900" style="text-transform:uppercase; letter-spacing: 1px">Hyperparameter
+                                <tspan x="29" dy="17">Tuning</tspan>
+                            </text>
+                        </g>
+
+                        <line x1="370" x2="400" y1="50" y2="50" stroke-width="2" stroke="#443c3d"
+                            stroke-dasharray="2,1" />
+
+                        <g transform="translate(400)">
+                            <rect fill="#39b54a" x="2" y="25" rx="3" ry="3" width="100" height="50" />
+                            <text x="16" y="47" font-family="Open Sans Condensed" font-size="10" stroke="none"
+                                fill="#f5f3e7" font-weight="900"
+                                style="text-transform:uppercase; letter-spacing: 1px">Initial
+                                <tspan x="16" dy="17">Training</tspan>
+                            </text>
+                        </g>
+                    </g>
+
+
+                </svg>
+            </div>
+        </div>
+    </section> <!-- end s-services -->
+    <!-- Worflow end -->
+
+
+    <!-- footer  -->
+    <div class="copyright" style="text-align: center;">
+        <strong>
+            &copy; 2023 ASVA. All rights reserved.
+            <ul>
+                <li>Adesh Mhetre</li>
+                <li>Adarsh Jadhav</li>
+                <li>Shivani Hardade</li>
+                <li>Vaishnavi Phadtare</li>
+            </ul>
+        </strong>
+    </div>
+
+    <!-- footer  -->
+
+     <!-- Java Script
+    ================================================== -->
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <!--Chatbot javascript-->
+    <script type="text/javascript">
+        (function (d, m) {
+            var kommunicateSettings =
+                { "appId": "e6993650ef59b1d94a12181b8359f344", "popupWidget": true, "automaticChatOpenOnNavigation": true };
+            var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+            s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+            var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+            window.kommunicate = m; m._globals = kommunicateSettings;
+        })(document, window.kommunicate || {});
+    /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+    </script>
+
+
+    <script>
+        document.querySelector('#upload-form').addEventListener('submit', (event) => {
+            const fileInput = document.querySelector('input[type="file"]');
+            if (!fileInput.files || !fileInput.files[0]) {
+                event.preventDefault();
+                location.reload();
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

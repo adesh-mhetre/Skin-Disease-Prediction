@@ -1,0 +1,135 @@
+# Python
+*.py[cod]
+*.pyc
+__pycache__
+*.so
+*.egg
+*.egg-info
+*.pyd
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Environment
+.env
+venv/
+env/
+ENV/
+venv.bak/
+venv.bak/
+bin/
+lib/
+include/
+pip-selfcheck.json
+pyvenv.cfg
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+instance/
+.coverage
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+__pycache__
+staticfiles/
+media/
+local_settings.py
+
+# Folders to ignore
+/static/
+/media/
+/tmp/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# VS Code
+.vscode/
+
+# JetBrains
+.idea/
+*.iml
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Pycharm
+*.idea/
+*.pyc
+__pycache__/
+
+# Other
+*.swp
+*~
+
+
+#database
+HAM10000_metadata.csv
+hmnist_28_28_RGB.csv
+hmnist_28_28_L.csv
+
+#model
+home/static_home/ham28(93&89).h5
+home/static_home/model.h5

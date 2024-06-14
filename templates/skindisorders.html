@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+{% load static %}
+<html class="no-js" lang="en">
+
+
+<head>
+
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, user-scalable=1">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/zub3tbp.css">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Skin Disease Predictor</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+
+    <!-- script
+    ================================================== -->
+    <script src="{% static 'js/modernizr.js' %}"></script>
+    <script src="{% static 'js/pace.min.js' %}"></script>
+
+
+
+    <script type="text/javascript">
+        var svg = document.getElementsByTagName("svg");
+
+        var rect = document.getElementsByTagName("rect");
+
+        var text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        text.setAttribute('x', '10');
+        text.setAttribute('y', '20');
+        text.setAttribute('fill', '#000');
+        text.textContent = 'Hello, I am a blah blah blah blah blah';
+    </script>
+
+
+
+</head>
+
+<body id="top">
+
+
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <nav class="header-nav">
+
+            <a href="" class="header-nav__close" title="close"><span>Close</span></a>
+
+            <div class="header-nav__content">
+                <h3>Navigation</h3>
+
+                <ul class="header-nav__list">
+                    {% if user.is_authenticated %}
+                    <li class="current">
+                        <p>Hey, {{ user.first_name }}</p>
+                    </li>
+                    {% endif %}
+                    <li><a href="/" title="home">Home</a></li>
+                    <li><a href="/about" title="about">About</a></li>
+                    <li><a href="/workflow" title="workflow">Workflow</a></li>
+                    <li><a href="" title="Skin Disorders">Skin Disorders</a></li>
+                    <li><a href="/diagnosis" title="diagnosis">Diagnosis</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="/logout" title="contact">Logout</a></li>
+                    {% else %}
+                    <li><a href="/login" title="contact">Login</a></li>
+                    <li><a href="/signup" title="contact">Sign up</a></li>
+                    {% endif %}
+
+                </ul>
+
+                <p>Skin Disease Predictor<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-
+                    ASVA</p>
+
+
+
+            </div> <!-- end header-nav__content -->
+
+        </nav>
+
+        <a class="header-menu-toggle" href="">
+            <span class="header-menu-text">Menu</span>
+            <span class="header-menu-icon"></span>
+        </a>
+
+    </header> <!-- end s-header -->
+
+
+
+    <!-- works
+    ================================================== -->
+    <section id='info' class="s-works ">
+
+        <div class="intro-wrap">
+
+            <div class="row section-header has-bottom-sep light-sep" data-aos="fade-up">
+                <div class="col-full">
+                    <h1 class="display-2 display-2--light">What are skin disorders?</h1>
+                </div>
+            </div> <!-- end section-header -->
+
+
+            <div class="row about-desc" data-aos="fade-up">
+
+                <div class="col-full" style="font-size: 16px">
+
+                    <img src="{% static 'images/Actinic keratoses/ISIC_0024468.jpg' %}" style="height: 200px; ">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="{% static 'images/Benign keratosis-like lesions/ISIC_0024930.jpg' %}"
+                        style="height: 200px; "><br><br>
+
+                    <p style="text-align: justify;">
+                        Skin disorders vary greatly in symptoms and severity. They can be temporary or permanent, and
+                        may be painless or painful. Some have situational causes, while others may be genetic. Some skin
+                        conditions are minor, and others can be life-threatening. While most skin disorders are minor,
+                        others can indicate a more serious issue.
+                    </p>
+                    <p style="text-align: justify;">
+                        In the observational study, skin diseases contributed 1.79% to the global burden of disease
+                        measured in disability-adjusted life years (DALYs). Skin diseases arranged in order of
+                        decreasing
+                        global DALYs are as follows: dermatitis (atopic, contact, seborrheic), acne vulgaris, urticaria,
+                        psoriasis, viral skin diseases, fungal skin diseases, scabies, melanoma, pyoderma, cellulitis,
+                        keratinocyte carcinoma, decubitus ulcer, and alopecia areata. Skin diseases remain a major cause
+                        of disability worldwide. An objective measure of burden, such as the DALY, allows for comparison
+                        of diverse diseases across geography and time.
+                    </p>
+                    <p style="text-align: justify;">
+                        Disability secondary to skin conditions is substantial worldwide. The Global Burden of Disease
+                        Study 2013 includes estimates of global morbidity and mortality due to skin diseases.
+                        For nonfatal estimates, data were found by literature search using PubMed and Google Scholar
+                        in English and Spanish for years 1980 through 2013 and by accessing administrative data on
+                        hospital inpatient and outpatient episodes. Data for fatal estimates were based on vital
+                        registration and verbal autopsy data.
+                    </p>
+                    <p style="text-align: justify;">
+                        Skin conditions contributed 1.79% to the global burden of disease measured in DALYs from
+                        306 diseases and injuries in 2013. Individual skin diseases varied in size from 0.38% of total
+                        burden for dermatitis (atopic, contact, and seborrheic dermatitis), 0.29% for acne vulgaris,
+                        0.19% for psoriasis, 0.19% for urticaria, 0.16% for viral skin diseases, 0.15% for fungal skin
+                        diseases, 0.07% for scabies, 0.06% for malignant skin melanoma, 0.05% for pyoderma, 0.04% for
+                        cellulitis, 0.03% for keratinocyte carcinoma, 0.03% for decubitus ulcer, and 0.01% for alopecia
+                        areata. All other skin and subcutaneous diseases composed 0.12% of total DALYs.
+                    </p>
+                    <p style="text-align: justify;">
+                        Skin and subcutaneous diseases were the 18th leading cause of global DALYs in Global Burden
+                        of Disease 2013. Excluding mortality, skin diseases were the fourth leading cause of disability
+                        worldwide.
+                    </p>
+                    <p style="text-align: justify;">
+                        So there is a need to help people worldwide with skin disease. Therefore, the idea of this
+                        application
+                        arises. This application helps people to get to know which disease they are going through.
+                        Patient need to sign up to this application for running diagnose test. After signing up, they
+                        have to upload a microscopic image of the area where they have symptoms. Using deep learning,
+                        this
+                        application will predict the disease they are suffering from. Patient need to be signed in to
+                        run this test.
+                        <br>Our algorithm identifies 7 diseases, which are:
+
+                    <ul style="text-align: left">
+                        <li>
+                            Actinic keratoses
+                        </li>
+                        <li>
+                            Basal cell carcinoma
+                        </li>
+                        <li>
+                            Benign keratosis-like lesions
+                        </li>
+                        <li>
+                            Dermatofibroma
+                        </li>
+                        <li>
+                            Melanocytic nevi
+                        </li>
+                        <li>
+                            Melanoma
+                        </li>
+                        <li>
+                            Vascular lesions
+                        </li>
+                    </ul>
+
+                    </p>
+
+                </div>
+
+            </div> <!-- end works-content -->
+
+
+        </div> <!-- end intro-wrap -->
+
+
+    </section> <!-- end s-works -->
+
+    <!-- footer  -->
+    <div class="copyright" style="text-align: center;">
+        <strong>
+            &copy; 2023 ASVA. All rights reserved.
+            <ul>
+                <li>Adesh Mhetre</li>
+                <li>Adarsh Jadhav</li>
+                <li>Shivani Hardade</li>
+                <li>Vaishnavi Phadtare</li>
+            </ul>
+        </strong>
+    </div>
+
+    <!-- footer  -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <!--Chatbot javascript-->
+    <script type="text/javascript">
+        (function (d, m) {
+            var kommunicateSettings =
+                { "appId": "e6993650ef59b1d94a12181b8359f344", "popupWidget": true, "automaticChatOpenOnNavigation": true };
+            var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+            s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+            var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+            window.kommunicate = m; m._globals = kommunicateSettings;
+        })(document, window.kommunicate || {});
+    /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+    </script>
+
+
+    <script>
+        document.querySelector('#upload-form').addEventListener('submit', (event) => {
+            const fileInput = document.querySelector('input[type="file"]');
+            if (!fileInput.files || !fileInput.files[0]) {
+                event.preventDefault();
+                location.reload();
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
